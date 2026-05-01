@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="prueba.css">
+    <script src="prueba.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+
+
+  <h1 style="text-align: center;">Pagina para Reciclrar Codigo</h1>
+
+  <h1>&lt;/práctica html&gt;</h1>
+  <p class="subtitulo">Zona de pruebas — editá lo que quieras y experimentá</p>
+
+   <!-- IMAGEN -->
+  <div class="seccion">
+  <h2></h2>
+  <img src="Js.png" alt="Foto js, css y html">
+  <p class="tip"> </p>
+</div>
+  <!-- TEXTOS -->
+  <div class="seccion">
+    <h2>📝 esto funciona para textos y etiquetas</h2>
+    <p>Esto es un párrafo normal con texto.</p>
+    <p>Este tiene <strong>texto en negrita</strong> y este en <em>itálica</em>.</p>
+    <p>También podés poner un <a href="#">los enlaces se ponen así</a>.</p>
+    <p class="tip">→ Probá cambiar las etiquetas: &lt;h1&gt; a &lt;h6&gt;, &lt;mark&gt;, &lt;del&gt;, &lt;small&gt;</p>
+  </div>
+
+  <!-- LISTAS -->
+  <div class="seccion">
+    <h2>📋 Listas</h2>
+    <ul>
+      <li>Lista desordenada (ul)</li>
+      <li>Item dos</li>
+      <li>Item tres</li>
+    </ul>
+    <ol>
+      <li>Lista ordenada (ol)</li>
+      <li>Item dos</li>
+      <li>Item tres</li>
+    </ol>
+    <p class="tip">→ anidacion</p>
+  </div>
+
+  <!-- TABLA -->
+  <div class="seccion">
+    <h2>📊 Tabla</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Etiqueta</th>
+          <th>Para qué sirve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Párrafo</td>
+          <td>&lt;p&gt;</td>
+          <td>Bloque de texto</td>
+        </tr>
+        <tr>
+          <td>Imagen</td>
+          <td>&lt;img&gt;</td>
+          <td>Mostrar imágenes</td>
+        </tr>
+        <tr>
+          <td>Enlace</td>
+          <td>&lt;a&gt;</td>
+          <td>Links y navegación</td>
+        </tr>
+        <tr>
+          <td>División</td>
+          <td>&lt;div&gt;</td>
+          <td>Contenedor genérico</td>
+        </tr> 
+        <tr>
+            <td>link</td>
+            <td>&lt;a &gt;</td>
+            <td>te mada al pingo</td>
+
+        </tr>
+        
+      </tbody>
+    </table>
+    <p class="tip">→ Probá agregar más filas o columnas</p>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="seccion">
+    <h2>📬 Formulario</h2>
+    <label for="nombre">Tu nombre:</label>
+    <input type="text" id="nombre" placeholder="Escribí tu nombre...">
+
+    <label for="opcion">Elegí una opción:</label>
+    <select id="opcion">
+      <option value="">-- seleccionar --</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+    </select>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" rows="3" placeholder="Escribí algo..."></textarea>
+
+    <button onclick="mostrarResultado()">Enviar</button>
+
+    <div id="resultado"></div>
+    <p class="tip">→ Probá tipos de input: type="email", "number", "date", "checkbox", "radio"</p>
+  </div>
+
+
+  <script>
+    function mostrarResultado() {
+      const nombre  = document.getElementById('nombre').value || '(sin nombre)';
+      const opcion  = document.getElementById('opcion').value || '(sin opción)';
+      const mensaje = document.getElementById('mensaje').value || '(sin mensaje)';
+
+      const div = document.getElementById('resultado');
+      div.style.display = 'block';
+      div.innerHTML = `
+        ✅ <strong>Datos del formulario:</strong><br>
+        Nombre: ${nombre}<br>
+        Opción: ${opcion}<br>
+        Mensaje: ${mensaje}
+      `;
+    }
+  </script>
+
+</body>
+</html>
